@@ -1,0 +1,40 @@
+//SCSS
+//继承
+.btn {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #f36;
+  color: #fff;
+  @extend .btn;
+}
+
+.btn-second {
+  background-color: orange;
+  color: #fff;
+  @extend .btn;
+}
+//占位符
+%mt5 {
+  margin-top: 5px;
+}
+%pt5{
+  padding-top: 5px;
+}
+.test {
+  @extend %mt5;
+  @extend %pt5;
+}
+
+.bottom {
+  @extend %mt5;
+
+  span {
+    @extend %pt5;
+  }
+}
+
+

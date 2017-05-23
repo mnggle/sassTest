@@ -1,0 +1,71 @@
+//SCSS中混合宏使用
+@mixin mt($var){
+  margin-top: $var;  
+}
+
+.block {
+  @include mt(5px);
+
+  span {
+    display:block;
+    @include mt(5px);
+  }
+}
+
+.header {
+  color: orange;
+  @include mt(5px);
+
+  span{
+    display:block;
+    @include mt(5px);
+  }
+}
+
+//SCSS 继承的运用
+.mt{
+  margin-top: 5px;  
+}
+
+.block {
+  @extend .mt;
+
+  span {
+    display:block;
+    @extend .mt;
+  }
+}
+
+.header {
+  color: orange;
+  @extend .mt;
+
+  span{
+    display:block;
+    @extend .mt;
+  }
+}
+
+//SCSS中占位符的使用
+%mt{
+  margin-top: 5px;  
+}
+
+.block {
+  @extend %mt;
+
+  span {
+    display:block;
+    @extend %mt;
+  }
+}
+
+.header {
+  color: orange;
+  @extend %mt;
+
+  span{
+    display:block;
+    @extend %mt;
+  }
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,iCACQ;EACJ,OAAO,EAAC,EAAE;EACV,OAAO,EAAE,KAAK;AAElB,eAAQ;EACJ,KAAK,EAAC,IAAI;EACV,QAAQ,EAAE,MAAM",
+"sources": ["../sass/clear.scss"],
+"names": [],
+"file": "clear.css"
+}

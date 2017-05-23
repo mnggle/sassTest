@@ -1,0 +1,60 @@
+// 混合宏
+@mixin border-radius{
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+//混合宏调用
+button {
+     @include border-radius;
+}
+//带参数混合宏
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+//带参数混合宏调用
+.box{
+     @include border-radius(3px);
+}
+
+//带参数混合宏-传一个带值的参数
+@mixin border-radius($radius:3px){
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+.btn{
+     @include border-radius;
+}
+.btn{
+     @include border-radius(50%);
+}
+
+//带参数混合宏-传多个带值的参数
+@mixin center($width,$height,$bgc:green){
+    width: $width;
+    height: $height;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -($height)/2;
+    margin-left: -($width)/2;
+    background-color:$bgc;
+}
+.box-center{
+    @include center(500px, 300px,red)
+}
+//特别的参数 '...'
+//当$shadows的参数个数大于等于1的时候调用参数。否则使用默认值
+@mixin box-shadow($shadows...){
+  @if length($shadows) >= 1 {
+    -webkit-box-shadow: $shadows;
+    box-shadow: $shadows;
+  } @else {
+    $shadows: 0 0 2px rgba(#000,.25);
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+  }
+}
+.box {
+  @include box-shadow(0 0 1px rgba(#000,.5),0 0 2px rgba(#000,.2));
+}

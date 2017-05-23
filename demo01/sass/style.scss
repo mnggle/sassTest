@@ -1,0 +1,10 @@
+$bgc :red;
+$div-width:400px;
+test{
+    background-color: $bgc;
+    height: 100px;
+    width:$div-width/2;
+    h1{
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,20 @@
+.btn, .btn-primary, .btn-second {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  font-size: 14px; }
+
+.btn-primary {
+  background-color: #f36;
+  color: #fff; }
+
+.btn-second {
+  background-color: orange;
+  color: #fff; }
+
+.test, .bottom {
+  margin-top: 5px; }
+
+.test, .bottom span {
+  padding-top: 5px; }
+
+/*# sourceMappingURL=style.css.map */
